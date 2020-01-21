@@ -540,7 +540,7 @@ static psa_status_t psa_import_rsa_key( psa_key_type_t type,
 {
     psa_status_t status;
     mbedtls_pk_context pk;
-    mbedtls_rsa_context *rsa;
+    mbedtls_rsa_context *rsa = NULL;
     size_t bits;
 
     mbedtls_pk_init( &pk );
